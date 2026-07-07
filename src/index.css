@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #282828;
+  background: #FAF9F5;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Nunito', sans-serif;
+}
