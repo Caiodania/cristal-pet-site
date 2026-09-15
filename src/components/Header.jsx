@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
+import { WHATSAPP_LINK_AGENDAR } from '../data/site'
 
 const NAV_LINKS = [
   { label: 'Início', href: '#inicio' },
@@ -12,16 +13,20 @@ const NAV_LINKS = [
   { label: 'Faq', href: '#faq' },
 ]
 
-const WHATSAPP_LINK = 'https://wa.me/5519971548471'
-
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 md:h-20">
-        <a href="#inicio" className="font-heading font-extrabold text-xl md:text-2xl text-teal shrink-0">
-          Cristal <span className="text-magenta">Pet</span>
+        <a href="#inicio" className="shrink-0" aria-label="Cristal Pet Móvel - página inicial">
+          <img
+            src="/img/logo-cristal-pet.webp"
+            alt="Cristal Pet Móvel - banho e tosa móvel"
+            width={500}
+            height={500}
+            className="h-12 md:h-16 w-auto"
+          />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -37,7 +42,7 @@ function Header() {
         </nav>
 
         <a
-          href={WHATSAPP_LINK}
+          href={WHATSAPP_LINK_AGENDAR}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden lg:inline-flex items-center gap-2 bg-magenta text-white font-body font-semibold px-5 py-2.5 rounded-full hover:brightness-110 transition"
@@ -78,7 +83,7 @@ function Header() {
                 </a>
               ))}
               <a
-                href={WHATSAPP_LINK}
+                href={WHATSAPP_LINK_AGENDAR}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}

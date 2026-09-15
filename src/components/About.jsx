@@ -1,18 +1,21 @@
 import { motion } from 'framer-motion'
-import { GiPawPrint } from 'react-icons/gi'
-import { FaBullseye, FaEye, FaCheckCircle, FaHeart, FaMedal, FaUsers } from 'react-icons/fa'
+import { FaCheckCircle } from 'react-icons/fa'
 import { fadeUp, fadeUpContainer, viewportOnce } from '../lib/motion'
 import AnimatedCounter from './AnimatedCounter'
 import SectionAccent from './SectionAccent'
+import TiltedOutline from './TiltedOutline'
+import { STATS } from '../data/stats'
 
 const PILLARS = [
   {
-    icon: FaBullseye,
+    icon: '/img/icone-missao.webp',
+    iconAlt: 'Ilustração de um alvo com uma flecha no centro',
     title: 'Missão',
     body: 'Proporcionar o serviço de banho e tosa mais seguro, confortável e conveniente do mercado, tratando cada pet com a dignidade e o carinho que ele merece, através do nosso método Low Stress.',
   },
   {
-    icon: FaEye,
+    icon: '/img/icone-visao.webp',
+    iconAlt: 'Ilustração de uma pessoa no alto de uma montanha olhando por um telescópio',
     title: 'Visão',
     body: 'Ser a marca referência e a primeira escolha em cuidado pet móvel no Brasil, expandindo nossa qualidade através de uma rede de franqueados apaixonados.',
   },
@@ -26,11 +29,21 @@ const VALUES = [
   'Inovação constante.',
 ]
 
-const STATS = [
-  { icon: FaHeart, target: 15, suffix: ' K+', label: 'Pets felizes' },
-  { icon: FaUsers, target: 9, suffix: ' K+', label: 'Clientes Felizes' },
-  { icon: FaMedal, target: 8, suffix: ' +', label: 'Anos de experiência' },
-]
+// Borda magenta em dois cantos opostos, como nos cards do site original.
+function CornerBorders() {
+  return (
+    <>
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 left-0 w-20 h-20 border-t-4 border-l-4 border-magenta rounded-tl-2xl"
+      />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 right-0 w-20 h-20 border-b-4 border-r-4 border-magenta rounded-br-2xl"
+      />
+    </>
+  )
+}
 
 function About() {
   return (
@@ -42,27 +55,46 @@ function About() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="relative h-80 sm:h-96 md:h-[420px]"
+            className="relative"
           >
-            <div className="absolute top-0 left-4 w-16 h-16 rounded-full bg-teal/15" />
-            <div className="absolute bottom-6 right-0 w-12 h-12 rounded-full bg-magenta/15" />
-            <GiPawPrint className="absolute -top-4 right-10 text-3xl text-magenta/40 rotate-12" />
-            <GiPawPrint className="absolute bottom-0 left-0 text-2xl text-teal/40 -rotate-12" />
+            <img
+              src="/img/bolhas.webp"
+              alt=""
+              aria-hidden="true"
+              width={800}
+              height={800}
+              loading="lazy"
+              decoding="async"
+              className="absolute inset-0 w-full h-full object-contain scale-110 opacity-70 pointer-events-none"
+            />
 
             <img
-              src="https://placehold.co/320x400/4BC0AF/FAF9F5?text=Cristal+Pet"
-              alt="Equipe Cristal Pet"
-              className="absolute top-0 left-6 w-40 sm:w-48 h-56 sm:h-64 object-cover rounded-2xl shadow-xl -rotate-6"
+              src="/img/sobre-colagem.webp"
+              alt="Colagem com a equipe da Cristal Pet e pets atendidos em cenário natalino"
+              width={1000}
+              height={1000}
+              loading="lazy"
+              decoding="async"
+              className="relative w-full h-auto"
+            />
+
+            <img
+              src="/img/patinhas.png"
+              alt=""
+              aria-hidden="true"
+              width={34}
+              height={44}
+              loading="lazy"
+              className="absolute -top-3 left-4 w-6 h-auto -rotate-12"
             />
             <img
-              src="https://placehold.co/320x400/C82D91/FAF9F5?text=Unidade+M%C3%B3vel"
-              alt="Unidade móvel Cristal Pet"
-              className="absolute top-10 right-0 w-36 sm:w-44 h-48 sm:h-56 object-cover rounded-2xl shadow-xl rotate-6 z-10"
-            />
-            <img
-              src="https://placehold.co/320x400/282828/FAF9F5?text=Pet+Feliz"
-              alt="Pet atendido"
-              className="absolute bottom-0 left-16 sm:left-24 w-36 sm:w-44 h-44 sm:h-52 object-cover rounded-2xl shadow-xl rotate-3 z-20"
+              src="/img/patinhas.png"
+              alt=""
+              aria-hidden="true"
+              width={34}
+              height={44}
+              loading="lazy"
+              className="absolute -bottom-4 right-6 w-7 h-auto rotate-[18deg]"
             />
           </motion.div>
 
@@ -128,16 +160,23 @@ function About() {
           viewport={viewportOnce}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-20"
         >
-          {PILLARS.map(({ icon: Icon, title, body }) => (
+          {PILLARS.map(({ icon, iconAlt, title, body }) => (
             <motion.div
               key={title}
               variants={fadeUp}
-              className="bg-white rounded-2xl shadow-lg p-8"
+              className="relative bg-white rounded-2xl shadow-lg p-8 text-center"
             >
-              <div className="w-14 h-14 rounded-full bg-magenta/10 flex items-center justify-center mb-5">
-                <Icon className="text-2xl text-magenta" />
-              </div>
-              <h3 className="font-heading font-extrabold text-xl text-dark mb-3">
+              <CornerBorders />
+              <img
+                src={icon}
+                alt={iconAlt}
+                width={250}
+                height={250}
+                loading="lazy"
+                decoding="async"
+                className="w-20 h-20 object-contain mx-auto mb-4"
+              />
+              <h3 className="font-heading font-black text-xl text-magenta mb-3">
                 {title}
               </h3>
               <p className="font-body text-dark/70 text-sm leading-relaxed">
@@ -148,17 +187,27 @@ function About() {
 
           <motion.div
             variants={fadeUp}
-            className="bg-white rounded-2xl shadow-lg p-8"
+            className="relative bg-white rounded-2xl shadow-lg p-8 text-center"
           >
-            <div className="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center mb-5">
-              <FaCheckCircle className="text-2xl text-teal" />
-            </div>
-            <h3 className="font-heading font-extrabold text-xl text-dark mb-3">
+            <CornerBorders />
+            <img
+              src="/img/icone-valores.webp"
+              alt="Ilustração de uma mão segurando um diamante"
+              width={250}
+              height={250}
+              loading="lazy"
+              decoding="async"
+              className="w-20 h-20 object-contain mx-auto mb-4"
+            />
+            <h3 className="font-heading font-black text-xl text-magenta mb-3">
               Valores
             </h3>
-            <ul className="space-y-2 text-left">
+            <ul className="space-y-2">
               {VALUES.map((value) => (
-                <li key={value} className="flex items-start gap-2 font-body text-dark/70 text-sm">
+                <li
+                  key={value}
+                  className="flex items-start justify-center gap-2 font-body text-dark/70 text-sm"
+                >
                   <FaCheckCircle className="text-teal mt-0.5 shrink-0" />
                   {value}
                 </li>
@@ -172,19 +221,37 @@ function About() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="grid sm:grid-cols-3 gap-6 md:gap-8 mt-16"
+          className="grid sm:grid-cols-3 gap-8 md:gap-10 mt-20"
         >
-          {STATS.map(({ icon: Icon, target, suffix, label }, index) => (
+          {STATS.map(({ id, icon, iconAlt, target, suffix, label }, index) => (
             <motion.div
-              key={label}
+              key={id}
               variants={fadeUp}
-              className={`bg-white rounded-2xl border-2 border-magenta/30 shadow-lg p-8 text-center ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+              className="relative rounded-2xl"
             >
-              <Icon className="text-3xl text-magenta mx-auto mb-3" />
-              <p className="font-heading font-extrabold text-3xl sm:text-4xl text-dark">
-                <AnimatedCounter target={target} suffix={suffix} />
-              </p>
-              <p className="font-body text-dark/70 text-sm mt-1">{label}</p>
+              <TiltedOutline rotate={index % 2 === 0 ? -3 : 3} x={index % 2 === 0 ? -12 : 12} y={12} />
+              <div className="relative bg-white rounded-2xl shadow-lg p-8 text-center">
+                <img
+                  src={icon}
+                  alt={iconAlt}
+                  width={80}
+                  height={80}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-14 h-14 object-contain mx-auto mb-3"
+                />
+                <p className="font-heading font-black text-4xl sm:text-5xl">
+                  <AnimatedCounter
+                    target={target}
+                    suffix={suffix}
+                    numberClassName="text-teal"
+                    suffixClassName="text-magenta"
+                  />
+                </p>
+                <p className="font-body font-semibold text-magenta text-sm mt-2">
+                  {label}
+                </p>
+              </div>
             </motion.div>
           ))}
         </motion.div>

@@ -8,13 +8,16 @@ function CtaBanner() {
     <section className="relative">
       <WaveDivider color="text-cream" flip />
 
-      <div
-        className="relative bg-cover bg-center py-24 md:py-32"
-        style={{
-          backgroundImage:
-            "url('https://placehold.co/1600x700/282828/FAF9F5?text=Foto+de+Pet')",
-        }}
-      >
+      <div className="relative py-24 md:py-32 overflow-hidden">
+        <img
+          src="/img/cta-gatinhos.webp"
+          alt="Dois gatinhos ragdoll brincando com bolinhas coloridas"
+          width={1600}
+          height={867}
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-cream/80" />
 
         <motion.div

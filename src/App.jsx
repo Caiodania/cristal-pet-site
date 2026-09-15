@@ -11,6 +11,7 @@ import CoverageArea from './components/CoverageArea'
 import Gallery from './components/Gallery'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
+import WhatsAppFloat from './components/WhatsAppFloat'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <FAQ />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </>
   )
 }

@@ -1,16 +1,15 @@
 import { motion } from 'framer-motion'
 import { FaWhatsapp } from 'react-icons/fa'
 import WaveDivider from './WaveDivider'
-
-const WHATSAPP_LINK = 'https://wa.me/5519971548471?text=Ol%C3%A1!%20Quero%20agendar%20um%20banho%20para%20meu%20pet.'
+import { WHATSAPP_LINK_AGENDAR } from '../data/site'
 
 function Hero() {
   return (
     <section
       id="inicio"
-      className="relative bg-teal overflow-hidden pt-28 pb-32 md:pt-36 md:pb-48"
+      className="relative bg-teal overflow-hidden pt-24 pb-32 md:pt-32 md:pb-48"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 items-center gap-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 items-center gap-8 md:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,7 +35,7 @@ function Hero() {
           </p>
 
           <a
-            href={WHATSAPP_LINK}
+            href={WHATSAPP_LINK_AGENDAR}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-magenta text-white font-body font-semibold text-lg px-8 py-4 rounded-full mt-8 shadow-lg hover:brightness-110 hover:scale-105 transition"
@@ -50,16 +49,20 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
-          className="relative flex justify-center md:justify-end"
+          className="relative flex justify-center md:justify-end md:self-end md:-mb-32"
         >
-          <div className="absolute -top-6 -left-4 w-16 h-16 rounded-full bg-white/30 hidden sm:block" />
-          <div className="absolute top-10 -right-2 w-10 h-10 rounded-full bg-magenta/40" />
-          <div className="absolute -bottom-4 left-8 w-8 h-8 rounded-full bg-white/40 hidden sm:block" />
+          <div className="absolute top-2 left-2 sm:-top-4 sm:left-0 w-16 h-16 rounded-full bg-white/25 hidden sm:block" />
+          <div className="absolute top-16 right-0 w-10 h-10 rounded-full bg-magenta/30 hidden sm:block" />
 
           <img
-            src="https://placehold.co/500x500/FAF9F5/282828?text=Foto+do+Pet"
-            alt="Pet feliz após o banho"
-            className="relative z-10 w-72 h-72 sm:w-96 sm:h-96 object-cover rounded-full border-8 border-white/30"
+            src="/img/hero-pet.webp"
+            alt="Cão sorridente cercado por bolhas de sabão após o banho na unidade móvel"
+            width={900}
+            height={900}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="relative w-64 sm:w-80 md:w-full max-w-md h-auto drop-shadow-2xl"
           />
         </motion.div>
       </div>

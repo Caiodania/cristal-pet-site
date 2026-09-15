@@ -12,12 +12,24 @@ function TrustSection() {
           viewport={viewportOnce}
           className="relative flex justify-center md:justify-start"
         >
-          <div className="absolute -top-6 -left-6 w-56 h-56 md:w-72 md:h-72 rounded-full bg-teal/10" />
-          <div className="absolute -bottom-6 right-6 w-40 h-40 rounded-full border-4 border-magenta/30" />
+          {/* A foto já vem recortada no blob pêssego com o contorno magenta. */}
           <img
-            src="https://placehold.co/480x480/4BC0AF/FAF9F5?text=Foto+do+Pet"
-            alt="Pet atendido pela Cristal Pet"
-            className="relative z-10 w-72 h-72 md:w-96 md:h-96 object-cover rounded-3xl shadow-xl"
+            src="/img/trajetoria-corgi.webp"
+            alt="Corgi sorridente recortado sobre uma forma orgânica cor de pêssego"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            decoding="async"
+            className="relative z-10 w-full max-w-sm md:max-w-md h-auto"
+          />
+          <img
+            src="/img/patinhas.png"
+            alt=""
+            aria-hidden="true"
+            width={34}
+            height={44}
+            loading="lazy"
+            className="absolute -top-2 right-6 w-6 h-auto rotate-12 opacity-80 hidden sm:block"
           />
         </motion.div>
 
@@ -35,9 +47,9 @@ function TrustSection() {
           </span>
 
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight mt-3">
-            <span className="text-dark">Uma </span>
-            <span className="text-teal">Trajetória de</span>{' '}
-            <span className="text-magenta">Confiança e Milhares de Patinhas Felizes</span>
+            <span className="text-magenta">Uma </span>
+            <span className="text-teal">Trajetória de Confiança</span>{' '}
+            <span className="text-magenta">e Milhares de Patinhas Felizes</span>
           </h2>
 
           <p className="font-body text-dark/70 text-lg mt-6 max-w-lg mx-auto md:mx-0">

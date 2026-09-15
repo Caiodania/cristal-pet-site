@@ -3,12 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FiChevronDown } from 'react-icons/fi'
 import { fadeUp, fadeUpContainer, viewportOnce } from '../lib/motion'
 import SectionAccent from './SectionAccent'
+import { OPENING_HOURS_SENTENCE } from '../data/site'
 
 const QUESTIONS = [
   {
     question: 'Como funciona o agendamento?',
     answer:
-      'O agendamento é feito direto pelo WhatsApp. Você entra em contato, informa a cidade, o serviço desejado e o porte do seu pet, e a gente confirma o melhor dia e horário para o atendimento.',
+      'O agendamento é feito direto pelo WhatsApp. Você entra em contato, informa a cidade, o serviço desejado e o porte do seu pet, e a gente confirma o melhor dia e horário para o atendimento. ' +
+      `Nosso atendimento é ${OPENING_HOURS_SENTENCE}.`,
   },
   {
     question: 'Quais cidades vocês atendem?',
@@ -43,7 +45,8 @@ const QUESTIONS = [
   {
     question: 'Como entro em contato com a Cristal Pet?',
     answer:
-      'Você pode falar com a gente pelo WhatsApp (19) 97154-8471 ou (19) 99904-1704, ou pelo e-mail cristalpetmovel@gmail.com.',
+      'Você pode falar com a gente pelo WhatsApp (19) 97154-8471 ou (19) 99904-1704, ou pelo e-mail cristalpetmovel@gmail.com. ' +
+      `Atendemos ${OPENING_HOURS_SENTENCE}.`,
   },
   {
     question: 'Minha cidade não está na lista de atendimento, e agora?',
@@ -60,9 +63,7 @@ const QUESTIONS = [
 const COLUMN_A = QUESTIONS.slice(0, 5)
 const COLUMN_B = QUESTIONS.slice(5, 10)
 
-const DOGS = Array.from({ length: 8 }, (_, index) => `https://placedog.net/100/100?id=${index + 20}`)
-
-function FaqColumn({ items, columnOffset }) {
+function FaqColumn({ items }) {
   const [openIndex, setOpenIndex] = useState(null)
 
   return (
@@ -84,6 +85,7 @@ function FaqColumn({ items, columnOffset }) {
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
+              aria-expanded={isOpen}
               className={`w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-heading font-bold ${isOpen ? 'text-white' : 'text-magenta'}`}
             >
               {item.question}
@@ -116,7 +118,7 @@ function FaqColumn({ items, columnOffset }) {
 
 function FAQ() {
   return (
-    <section id="faq" className="relative bg-cream pt-20 pb-32 md:pt-28 md:pb-40 overflow-hidden">
+    <section id="faq" className="relative bg-cream pt-20 md:pt-28 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={fadeUp}
@@ -138,16 +140,19 @@ function FAQ() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full flex justify-center gap-4 sm:gap-8 translate-y-1/2 pointer-events-none">
-        {DOGS.map((dog, index) => (
-          <img
-            key={dog}
-            src={dog}
-            alt=""
-            className={`w-14 h-14 sm:w-20 sm:h-20 rounded-full border-4 border-white object-cover shadow-lg hidden ${index % 2 === 0 ? 'sm:block' : 'md:block'}`}
-          />
-        ))}
-      </div>
+      <motion.img
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        src="/img/banner-caes.webp"
+        alt="Quatro cães de raças diferentes apoiados lado a lado em uma placa branca"
+        width={1509}
+        height={512}
+        loading="lazy"
+        decoding="async"
+        className="block w-full max-w-5xl mx-auto h-auto mt-16 px-4"
+      />
     </section>
   )
 }

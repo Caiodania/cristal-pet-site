@@ -1,0 +1,26 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# ATENÇÃO — badge "Powered by Netlify" (canto inferior direito)
+# Não existe chave de netlify.toml, variável de ambiente ou header que desative o
+# badge nem a Netlify Drawer: as duas opções são só de painel.
+#   Badge:  Project configuration > General > Powered by Netlify badge > desligar
+#           (vale na requisição seguinte, sem precisar de novo deploy)
+#   Drawer: Project configuration > Build & deploy > Continuous deployment >
+#           Collaboration tools > Configure > desativar a Netlify Drawer
+# O badge só aparece em projetos do plano Free; em planos pagos já vem desligado.
+
+# Imagens e bundles versionados pelo nome do arquivo: cache longo.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

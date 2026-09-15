@@ -2,15 +2,7 @@ import { motion } from 'framer-motion'
 import { FaCheckCircle } from 'react-icons/fa'
 import { fadeUp, fadeUpContainer, viewportOnce } from '../lib/motion'
 import WaveDivider from './WaveDivider'
-
-const CITIES = ['Indaiatuba', 'Campinas', 'Valinhos', 'Vinhedo']
-
-const CITY_PHOTOS = [
-  'https://placehold.co/120x120/FAF9F5/C82D91?text=Indaiatuba',
-  'https://placehold.co/120x120/FAF9F5/C82D91?text=Campinas',
-  'https://placehold.co/120x120/FAF9F5/C82D91?text=Valinhos',
-  'https://placehold.co/120x120/FAF9F5/C82D91?text=Vinhedo',
-]
+import { CITIES } from '../data/site'
 
 function CoverageArea() {
   return (
@@ -68,16 +60,16 @@ function CoverageArea() {
           viewport={viewportOnce}
           className="flex justify-center mt-10"
         >
-          <div className="flex -space-x-4">
-            {CITY_PHOTOS.map((photo, index) => (
-              <img
-                key={photo}
-                src={photo}
-                alt={`Cidade atendida ${index + 1}`}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white object-cover"
-              />
-            ))}
-          </div>
+          {/* Montagem oficial com as fotos circulares sobrepostas das 4 cidades. */}
+          <img
+            src="/img/cidades-atendidas.webp"
+            alt="Fotos aéreas de Indaiatuba, Campinas, Valinhos e Vinhedo, as cidades atendidas pela Cristal Pet"
+            width={900}
+            height={306}
+            loading="lazy"
+            decoding="async"
+            className="w-full max-w-2xl h-auto"
+          />
         </motion.div>
 
         <motion.div

@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'framer-motion'
 
-function AnimatedCounter({ target, suffix = '', duration = 1.6 }) {
+function AnimatedCounter({
+  target,
+  suffix = '',
+  duration = 1.6,
+  numberClassName = '',
+  suffixClassName = '',
+}) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.5 })
   const [value, setValue] = useState(0)
@@ -15,7 +21,7 @@ function AnimatedCounter({ target, suffix = '', duration = 1.6 }) {
     const step = (timestamp) => {
       if (start === null) start = timestamp
       const progress = Math.min((timestamp - start) / (duration * 1000), 1)
-      setValue(Math.floor(progress * target))
+      setValue(Math.round(progress * target))
       if (progress < 1) {
         frameId = requestAnimationFrame(step)
       } else {
@@ -29,8 +35,8 @@ function AnimatedCounter({ target, suffix = '', duration = 1.6 }) {
 
   return (
     <span ref={ref}>
-      {value.toLocaleString('pt-BR')}
-      {suffix}
+      <span className={numberClassName}>{value.toLocaleString('pt-BR')}</span>
+      {suffix && <span className={`ml-1 ${suffixClassName}`}>{suffix}</span>}
     </span>
   )
 }

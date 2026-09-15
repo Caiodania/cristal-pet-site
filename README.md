@@ -1,4 +1,26 @@
-# React + Vite
+# Cristal Pet — site institucional
+
+Site da Cristal Pet Móvel (banho e tosa móvel em Indaiatuba/SP), em React + Vite +
+Tailwind, publicado na Netlify.
+
+## Estrutura de conteúdo
+
+- `src/data/site.js` — telefones, e-mail, endereço, horário de atendimento, cidades e
+  links de WhatsApp. É a fonte única desses dados no site.
+- `src/data/stats.js` — números dos contadores da seção "Sobre" (contém um TODO de
+  validação com o cliente).
+- `src/data/galeria.js` — fotos da galeria, com dimensões declaradas.
+- `public/img/` — imagens da marca já otimizadas em webp (as miniaturas da galeria
+  ficam em `public/img/galeria/`, no par `<slug>.webp` + `<slug>-full.webp`).
+
+## Formulários (Netlify Forms)
+
+Os formulários "contato" e "newsletter" são enviados por `fetch` a partir do React
+(`src/lib/netlifyForm.js`). Como o bot do Netlify só lê o HTML estático do build, o
+`index.html` mantém uma cópia **oculta** de cada formulário — **não remover esses
+blocos**, ou os envios param de ser registrados.
+
+## Template original
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 

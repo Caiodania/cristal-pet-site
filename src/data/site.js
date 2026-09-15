@@ -1,0 +1,24 @@
+// Dados de contato e atendimento usados em todo o site.
+// Alterar aqui reflete no header, hero, contato, FAQ, rodapé e JSON-LD.
+
+export const WHATSAPP_NUMBER = '5519971548471'
+
+export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`
+
+export const WHATSAPP_LINK_AGENDAR = `https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1!%20Quero%20agendar%20um%20banho%20para%20meu%20pet.`
+
+export const PHONES = [
+  { label: '(19) 97154-8471', href: 'tel:+5519971548471' },
+  { label: '(19) 99904-1704', href: 'tel:+5519999041704' },
+]
+
+export const EMAIL = 'cristalpetmovel@gmail.com'
+
+export const ADDRESS = 'Rua México, 311, Indaiatuba - SP (Escritório Central / Garagem)'
+
+export const OPENING_HOURS = ['Seg a Sex: 8h às 17h', 'Sábado: 8h às 13h']
+
+export const OPENING_HOURS_SENTENCE =
+  'de segunda a sexta, das 8h às 17h, e aos sábados das 8h às 13h'
+
+export const CITIES = ['Indaiatuba', 'Campinas', 'Valinhos', 'Vinhedo']
