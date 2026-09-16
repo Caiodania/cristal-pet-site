@@ -9,6 +9,7 @@ import HowItWorks from './components/HowItWorks'
 import Contact from './components/Contact'
 import CoverageArea from './components/CoverageArea'
 import Gallery from './components/Gallery'
+import Feedback from './components/Feedback'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
@@ -28,6 +29,7 @@ function App() {
         <Contact />
         <CoverageArea />
         <Gallery />
+        <Feedback />
         <FAQ />
       </main>
       <Footer />

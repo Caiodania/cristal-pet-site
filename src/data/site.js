@@ -7,6 +7,14 @@ export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`
 
 export const WHATSAPP_LINK_AGENDAR = `https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1!%20Quero%20agendar%20um%20banho%20para%20meu%20pet.`
 
+export const WHATSAPP_LINK_FEEDBACK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  'Olá! Fui atendido pela Cristal Pet e quero enviar uma foto ou vídeo do meu pet.',
+)}`
+
+export const INSTAGRAM_HANDLE = 'cristalpetmovel'
+
+export const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}`
+
 export const PHONES = [
   { label: '(19) 97154-8471', href: 'tel:+5519971548471' },
   { label: '(19) 99904-1704', href: 'tel:+5519999041704' },

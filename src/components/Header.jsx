@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { label: 'Contato', href: '#contato' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'Galeria', href: '#galeria' },
+  { label: 'Feedback', href: '#feedback' },
   { label: 'Faq', href: '#faq' },
 ]
 

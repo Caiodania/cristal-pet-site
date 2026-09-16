@@ -9,6 +9,43 @@ function Hero() {
       id="inicio"
       className="relative bg-teal overflow-hidden pt-24 pb-32 md:pt-32 md:pb-48"
     >
+      {/*
+        Foto dos pets como ilustração de fundo do bloco de texto.
+        Fica fora do bloco animado de propósito: `mix-blend-multiply` precisa
+        compor direto com o verde-água da seção, e um elemento com opacity
+        animada (ou z-index) criaria um stacking context que isola a mistura.
+        O multiply faz o fundo branco da foto sumir dentro do verde sem
+        precisar recortar a imagem.
+      */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="relative">
+            {/*
+              Ampliada e sangrando pela esquerda: o corte descarta as margens
+              brancas vazias da foto (o conteúdo vive entre 12% e 88% da
+              largura) e joga a massa dos pets — concentrada na parte de baixo
+              da imagem — atrás dos parágrafos, deixando o título magenta livre.
+
+              No desktop ancora na base da coluna de texto. No mobile o layout
+              empilha e esta célula passa a ter a altura inteira da seção, então
+              ancorar na base jogaria a foto em cima do cão do hero; por isso
+              ali ela é posicionada pelo topo, ficando atrás do texto e parando
+              antes da foto principal.
+            */}
+            <img
+              src="/img/hero-pets-fundo.jpg"
+              alt=""
+              width={1492}
+              height={643}
+              loading="eager"
+              fetchPriority="low"
+              decoding="async"
+              className="absolute top-[39%] bottom-auto left-[-22%] w-[150%] h-auto max-w-none opacity-[0.18] mix-blend-multiply md:top-auto md:bottom-[4%] md:left-[-26%] md:w-[140%] lg:w-[150%] xl:w-[172%]"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 items-center gap-8 md:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
