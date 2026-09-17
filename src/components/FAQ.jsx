@@ -9,7 +9,7 @@ const QUESTIONS = [
   {
     question: 'Como funciona o agendamento?',
     answer:
-      'O agendamento é feito direto pelo WhatsApp. Você entra em contato, informa a cidade, o serviço desejado e o porte do seu pet, e a gente confirma o melhor dia e horário para o atendimento. ' +
+      'O agendamento é feito direto pelo WhatsApp. Você entra em contato, informa a cidade, o serviço desejado e a raça do seu pet, e a gente confirma o melhor dia e horário para o atendimento. ' +
       `Nosso atendimento é ${OPENING_HOURS_SENTENCE}.`,
   },
   {
@@ -20,7 +20,7 @@ const QUESTIONS = [
   {
     question: 'Como funciona o atendimento da unidade móvel?',
     answer:
-      'Nossa van totalmente equipada vai até a porta da sua casa. O banho e a tosa acontecem dentro do veículo, sem a necessidade de levar o seu pet até uma loja física.',
+      'Nossa van totalmente equipada vai até a porta da sua casa. O banho e a tosa acontecem dentro do veículo, sem a necessidade de levar o seu pet até uma loja física. Para o atendimento, precisamos apenas de um ponto de água e de uma tomada 220 volts próximos ao local onde a van vai estacionar.',
   },
   {
     question: 'Preciso estar em casa durante o atendimento?',
@@ -30,22 +30,22 @@ const QUESTIONS = [
   {
     question: 'Quais serviços vocês oferecem?',
     answer:
-      'Trabalhamos com banho, tosa e hidratação, adaptados às necessidades de cada pet. Fale com a gente para saber qual o serviço ideal para o seu companheiro.',
+      'Trabalhamos com banho, tosa, hidratação, corte de unha e escovação de dente, adaptados às necessidades de cada pet. Fale com a gente para saber qual o serviço ideal para o seu companheiro.',
   },
   {
     question: 'Quanto tempo dura o atendimento?',
     answer:
-      'O tempo varia de acordo com o porte, o tipo de pelagem e o serviço escolhido. Em geral, o atendimento completo leva entre 40 minutos e 2 horas.',
+      'O tempo varia de acordo com a raça, o tipo de pelagem e o serviço escolhido. Em geral, o atendimento completo leva entre 40 minutos e 1 hora e meia.',
   },
   {
     question: 'Posso remarcar ou cancelar meu horário?',
     answer:
-      'Sim! Basta entrar em contato pelo WhatsApp com antecedência para reagendar ou cancelar o seu horário sem problemas.',
+      'Sim! Basta entrar em contato pelo WhatsApp com pelo menos 24 horas de antecedência para reagendar ou cancelar o seu horário sem problemas.',
   },
   {
     question: 'Como entro em contato com a Cristal Pet?',
     answer:
-      'Você pode falar com a gente pelo WhatsApp (19) 97154-8471 ou (19) 99904-1704, ou pelo e-mail cristalpetmovel@gmail.com. ' +
+      'Você pode falar com a gente pelo WhatsApp (19) 97154-8471. ' +
       `Atendemos ${OPENING_HOURS_SENTENCE}.`,
   },
   {
@@ -86,7 +86,7 @@ function FaqColumn({ items }) {
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
-              className={`w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-heading font-bold ${isOpen ? 'text-white' : 'text-magenta'}`}
+              className={`w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-heading font-bold text-base md:text-lg ${isOpen ? 'text-white' : 'text-magenta'}`}
             >
               {item.question}
               <FiChevronDown
@@ -103,7 +103,7 @@ function FaqColumn({ items }) {
                   transition={{ duration: 0.25, ease: 'easeInOut' }}
                   className="overflow-hidden"
                 >
-                  <p className="px-6 pb-5 font-body text-white/90 text-sm leading-relaxed">
+                  <p className="px-6 pb-5 font-body text-white/90 text-base leading-relaxed">
                     {item.answer}
                   </p>
                 </motion.div>
@@ -118,8 +118,8 @@ function FaqColumn({ items }) {
 
 function FAQ() {
   return (
-    <section id="faq" className="relative bg-cream pt-20 md:pt-28 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="relative bg-cream pt-20 pb-8 md:pt-28 md:pb-10 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -139,20 +139,6 @@ function FAQ() {
           <FaqColumn items={COLUMN_B} />
         </div>
       </div>
-
-      <motion.img
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewportOnce}
-        src="/img/banner-caes.webp"
-        alt="Quatro cães de raças diferentes apoiados lado a lado em uma placa branca"
-        width={1509}
-        height={512}
-        loading="lazy"
-        decoding="async"
-        className="block w-full max-w-5xl mx-auto h-auto mt-16 px-4"
-      />
     </section>
   )
 }

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaPhoneAlt } from 'react-icons/fa'
 import { fadeUp, viewportOnce } from '../lib/motion'
 import WaveDivider from './WaveDivider'
+import PetFamily from './PetFamily'
 import { submitNetlifyForm, EMAIL_PATTERN } from '../lib/netlifyForm'
 import { OPENING_HOURS, PHONES } from '../data/site'
 
@@ -117,33 +118,26 @@ function Newsletter() {
 function Footer() {
   return (
     <footer className="relative">
-      <div className="relative bg-cream pt-16 pb-24 text-center">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          className="px-4"
-        >
-          <img
-            src="/img/logo-cristal-pet.webp"
-            alt="Cristal Pet Móvel - banho e tosa móvel"
-            width={500}
-            height={500}
-            loading="lazy"
-            decoding="async"
-            className="h-24 md:h-28 w-auto mx-auto"
-          />
-          <p className="font-body text-dark/70 mt-3">
+      <div className="relative bg-cream pt-16 pb-32 md:pt-20 md:pb-40 text-center overflow-x-clip">
+        <div className="px-4 sm:px-6">
+          {/* Pets reais da galeria reunidos em volta da logo. */}
+          <PetFamily />
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            className="font-heading font-extrabold text-dark/80 text-lg md:text-xl mt-10 md:mt-14"
+          >
             Sua pet shop móvel de confiança.
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
         <WaveDivider color="text-teal" />
       </div>
 
       <div className="bg-teal pt-16 pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-3 gap-10 text-center sm:text-left">
+        <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid sm:grid-cols-3 gap-10 text-center sm:text-left">
           <motion.div
             variants={fadeUp}
             initial="hidden"

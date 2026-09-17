@@ -15,6 +15,14 @@ export const INSTAGRAM_HANDLE = 'cristalpetmovel'
 
 export const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}`
 
+export const FACEBOOK_URL = 'https://www.facebook.com/cristal.moraes.1232/'
+
+// Reel do Instagram exibido no modal do card "Método Low Stress".
+// A rota /embed/ é a versão oficial para iframe (a página normal do reel não
+// permite ser incorporada).
+export const LOW_STRESS_REEL_URL = 'https://www.instagram.com/reel/DOTl_ymDg28/'
+export const LOW_STRESS_REEL_EMBED_URL = `${LOW_STRESS_REEL_URL}embed/`
+
 export const PHONES = [
   { label: '(19) 97154-8471', href: 'tel:+5519971548471' },
   { label: '(19) 99904-1704', href: 'tel:+5519999041704' },

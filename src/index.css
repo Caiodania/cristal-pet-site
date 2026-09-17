@@ -5,6 +5,14 @@ html {
   scroll-behavior: smooth;
   /* Compensa o header fixo ao navegar pelas âncoras. */
   scroll-padding-top: 5rem;
+  /*
+    Escala fluida da raiz: 16px até 640px de largura, crescendo até 18px a
+    partir de ~1600px. Como fontes, espaçamentos, cards e imagens do Tailwind
+    são em rem, tudo cresce junto em laptops e monitores grandes, sem precisar
+    de uma classe responsiva em cada elemento. Os breakpoints não são afetados
+    (rem em media query usa sempre o valor inicial de 16px).
+  */
+  font-size: clamp(1rem, 0.917rem + 0.21vw, 1.125rem);
 }
 
 body {
@@ -17,6 +25,13 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Nunito', sans-serif;
+  /* Quebra de linha equilibrada em títulos curtos (evita uma palavra sozinha). */
+  text-wrap: balance;
+}
+
+p, li {
+  /* Evita órfãs no fim dos parágrafos; ignorado onde não há suporte. */
+  text-wrap: pretty;
 }
 
 /* Anel pulsante do botão flutuante de WhatsApp. */
@@ -39,12 +54,43 @@ h1, h2, h3, h4 {
   animation: cp-pulse-ring 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+/* Entrada suave do modal de vídeo (dialog nativo). */
+@keyframes cp-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes cp-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+dialog.cp-modal[open] {
+  animation: cp-modal-in 0.22s ease-out;
+}
+
+dialog.cp-modal[open]::backdrop {
+  animation: cp-fade-in 0.22s ease-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .cp-pulse-ring {
+  .cp-pulse-ring,
+  dialog.cp-modal[open],
+  dialog.cp-modal[open]::backdrop {
     animation: none;
   }
 }

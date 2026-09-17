@@ -7,8 +7,7 @@ Tailwind, publicado na Netlify.
 
 - `src/data/site.js` — telefones, e-mail, endereço, horário de atendimento, cidades e
   links de WhatsApp. É a fonte única desses dados no site.
-- `src/data/stats.js` — números dos contadores da seção "Sobre" (contém um TODO de
-  validação com o cliente).
+- `src/data/stats.js` — números dos contadores da seção "Sobre".
 - `src/data/galeria.js` — fotos da galeria, com dimensões declaradas.
 - `public/img/` — imagens da marca já otimizadas em webp (as miniaturas da galeria
   ficam em `public/img/galeria/`, no par `<slug>.webp` + `<slug>-full.webp`).

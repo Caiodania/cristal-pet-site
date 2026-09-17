@@ -48,7 +48,7 @@ function CornerBorders() {
 function About() {
   return (
     <section id="sobre" className="relative bg-cream py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="grid md:grid-cols-2 items-center gap-16">
           <motion.div
             variants={fadeUp}
@@ -108,7 +108,7 @@ function About() {
           >
             <SectionAccent className="mx-auto md:mx-0 mb-2" />
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight">
-              <span className="text-magenta">Quase 8 anos de </span>
+              <span className="text-magenta">9 anos de </span>
               <span className="text-teal">paixão</span>
               <span className="text-magenta"> e cuidado Pet</span>
             </h2>
@@ -136,10 +136,10 @@ function About() {
                 levar um cuidado de altíssima qualidade diretamente para a
                 casa dos nossos clientes.
               </span>{' '}
-              Hoje, com quase 60.000 atendimentos realizados e o
+              Hoje, com mais de 90.000 atendimentos realizados e o
               reconhecimento de{' '}
               <span className="font-bold text-dark">
-                Melhor Banho e Tosa de Indaiatuba por dois anos consecutivos
+                Melhor Banho e Tosa de Indaiatuba por três anos consecutivos
               </span>
               , nosso propósito se fortaleceu.
             </p>
@@ -174,12 +174,12 @@ function About() {
                 height={250}
                 loading="lazy"
                 decoding="async"
-                className="w-20 h-20 object-contain mx-auto mb-4"
+                className="w-20 h-20 xl:w-24 xl:h-24 object-contain mx-auto mb-4"
               />
               <h3 className="font-heading font-black text-xl text-magenta mb-3">
                 {title}
               </h3>
-              <p className="font-body text-dark/70 text-sm leading-relaxed">
+              <p className="font-body text-dark/70 text-base leading-relaxed">
                 {body}
               </p>
             </motion.div>
@@ -197,7 +197,7 @@ function About() {
               height={250}
               loading="lazy"
               decoding="async"
-              className="w-20 h-20 object-contain mx-auto mb-4"
+              className="w-20 h-20 xl:w-24 xl:h-24 object-contain mx-auto mb-4"
             />
             <h3 className="font-heading font-black text-xl text-magenta mb-3">
               Valores
@@ -206,7 +206,7 @@ function About() {
               {VALUES.map((value) => (
                 <li
                   key={value}
-                  className="flex items-start justify-center gap-2 font-body text-dark/70 text-sm"
+                  className="flex items-start justify-center gap-2 font-body text-dark/70 text-base"
                 >
                   <FaCheckCircle className="text-teal mt-0.5 shrink-0" />
                   {value}
@@ -248,7 +248,7 @@ function About() {
                     suffixClassName="text-magenta"
                   />
                 </p>
-                <p className="font-body font-semibold text-magenta text-sm mt-2">
+                <p className="font-body font-semibold text-magenta text-base mt-2">
                   {label}
                 </p>
               </div>
