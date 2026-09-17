@@ -68,15 +68,40 @@ function About() {
               className="absolute inset-0 w-full h-full object-contain scale-110 opacity-70 pointer-events-none"
             />
 
-            <img
-              src="/img/sobre-colagem.webp"
-              alt="Colagem com a equipe da Cristal Pet e pets atendidos em cenário natalino"
-              width={1000}
-              height={1000}
-              loading="lazy"
-              decoding="async"
-              className="relative w-full h-auto"
-            />
+            {/*
+              Montagem com fotos reais da galeria: a unidade móvel à esquerda
+              (altura toda) e dois pets atendidos à direita, em molduras brancas
+              inclinadas. Substitui a colagem antiga, que trazia a equipe.
+            */}
+            <div className="relative grid grid-cols-5 gap-3 sm:gap-4 py-3">
+              <img
+                src="/img/galeria/g10.webp"
+                alt="Interior da unidade móvel Cristal Pet com mesa de tosa, secador e caixa de secagem"
+                width={640}
+                height={930}
+                loading="lazy"
+                decoding="async"
+                className="col-span-3 row-span-2 h-full w-full object-cover rounded-3xl border-4 border-white shadow-xl -rotate-2"
+              />
+              <img
+                src="/img/galeria/g02.webp"
+                alt="Cocker spaniel dourado com gravata natalina após a tosa"
+                width={640}
+                height={853}
+                loading="lazy"
+                decoding="async"
+                className="col-span-2 w-full aspect-[4/5] object-cover rounded-3xl border-4 border-white shadow-xl rotate-3"
+              />
+              <img
+                src="/img/galeria/g04.webp"
+                alt="Cão caramelo e branco com gravata borboleta vermelha ao lado de uma casinha decorada"
+                width={640}
+                height={927}
+                loading="lazy"
+                decoding="async"
+                className="col-span-2 w-full aspect-[4/5] object-cover object-top rounded-3xl border-4 border-white shadow-xl -rotate-3"
+              />
+            </div>
 
             <img
               src="/img/patinhas.png"

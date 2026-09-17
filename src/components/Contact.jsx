@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import {
   FaInstagram,
   FaFacebookF,
-  FaLinkedinIn,
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaEnvelope,
@@ -14,11 +13,9 @@ import { submitNetlifyForm, EMAIL_PATTERN } from '../lib/netlifyForm'
 import TiltedOutline from './TiltedOutline'
 import { ADDRESS, EMAIL, OPENING_HOURS, PHONES } from '../data/site'
 
-// TODO: colar link real do perfil de LinkedIn
 const SOCIALS = [
   { icon: FaInstagram, href: 'https://www.instagram.com/cristalpetmovel', label: 'Instagram' },
   { icon: FaFacebookF, href: 'https://www.facebook.com/cristal.moraes.1232/', label: 'Facebook' },
-  { icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn' },
 ]
 
 const CONTACT_CARDS = [
