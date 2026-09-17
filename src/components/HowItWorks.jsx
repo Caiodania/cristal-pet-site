@@ -18,7 +18,7 @@ const STEPS = [
     title: 'Chegamos até você',
     description:
       'Nossa unidade móvel, totalmente equipada com água aquecida e tudo o que seu pet precisa, estaciona na sua residência no horário combinado.',
-    image: '/img/passo-2-chegamos.webp',
+    image: '/img/passo-2-van-cristal-pet.webp',
     imageAlt: 'Interior da van de atendimento da Cristal Pet, com mesa de tosa, secador e caixa de secagem',
   },
   {
