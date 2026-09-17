@@ -46,7 +46,7 @@ function BenefitsCards() {
 
   return (
     <section className="relative bg-magenta pt-20 pb-28 md:pt-28 md:pb-36">
-      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={fadeUpContainer}
           initial="hidden"
@@ -67,12 +67,12 @@ function BenefitsCards() {
                 height={250}
                 loading="lazy"
                 decoding="async"
-                className="w-24 h-24 xl:w-28 xl:h-28 object-contain mb-4"
+                className="w-24 h-24 object-contain mb-4"
               />
               <h3 className="font-heading font-black text-lg text-magenta mb-2">
                 {title}
               </h3>
-              <p className="font-body text-dark/70 text-base leading-relaxed">
+              <p className="font-body text-dark/70 text-[15px] leading-relaxed">
                 {description}
               </p>
 
@@ -80,7 +80,7 @@ function BenefitsCards() {
                 <button
                   type="button"
                   onClick={() => setIsReelOpen(true)}
-                  className="mt-3 inline-flex items-center gap-1.5 font-body font-bold text-sm text-teal underline underline-offset-4 decoration-teal/40 hover:text-magenta hover:decoration-magenta/50 transition-colors"
+                  className="mt-3 inline-flex items-center gap-1.5 font-body font-bold text-[13px] text-teal underline underline-offset-4 decoration-teal/40 hover:text-magenta hover:decoration-magenta/50 transition-colors"
                 >
                   <FaPlay className="text-[9px]" aria-hidden="true" />
                   {video.label}

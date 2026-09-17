@@ -37,7 +37,7 @@ const SERVICES = [
 function Services() {
   return (
     <section id="servicos" className="relative bg-cream pt-8 pb-24 md:pb-32">
-      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -49,7 +49,7 @@ function Services() {
             <span className="text-dark">Nossos </span>
             <span className="text-magenta">serviços</span>
           </h2>
-          <p className="font-body text-dark/70 text-lg lg:text-xl mt-4 max-w-xl mx-auto">
+          <p className="font-body text-dark/70 text-lg mt-4 max-w-xl mx-auto">
             Tudo que seu pet precisa em um único atendimento, sem sair de casa.
           </p>
         </motion.div>
@@ -74,12 +74,12 @@ function Services() {
                 height={250}
                 loading="lazy"
                 decoding="async"
-                className="w-24 h-24 xl:w-28 xl:h-28 object-contain mb-4"
+                className="w-24 h-24 object-contain mb-4"
               />
               <h3 className={`font-heading font-black text-xl mb-2 ${titleColor}`}>
                 {title}
               </h3>
-              <p className="font-body text-white/85 text-base leading-relaxed">
+              <p className="font-body text-white/85 text-[15px] leading-relaxed">
                 {description}
               </p>
               <FaBone className="text-2xl text-white/50 mt-6" />

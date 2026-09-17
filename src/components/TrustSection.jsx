@@ -4,7 +4,7 @@ import { fadeUp, viewportOnce } from '../lib/motion'
 function TrustSection() {
   return (
     <section className="relative bg-cream py-20 md:py-28">
-      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid md:grid-cols-2 items-center gap-12">
+      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 items-center gap-12">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -20,7 +20,7 @@ function TrustSection() {
             height={1024}
             loading="lazy"
             decoding="async"
-            className="relative z-10 w-full max-w-sm md:max-w-md xl:max-w-lg h-auto"
+            className="relative z-10 w-full max-w-sm md:max-w-md h-auto"
           />
           <img
             src="/img/patinhas.png"
@@ -52,7 +52,7 @@ function TrustSection() {
             <span className="text-magenta">e Milhares de Patinhas Felizes</span>
           </h2>
 
-          <p className="font-body text-dark/70 text-lg lg:text-xl mt-6 max-w-lg mx-auto md:mx-0">
+          <p className="font-body text-dark/70 text-lg mt-6 max-w-lg mx-auto md:mx-0">
             A confiança que você procura está aqui. Somos referência em
             cuidado pet na região, um reconhecimento conquistado em cada
             serviço prestado. Nosso compromisso é com a saúde e a felicidade

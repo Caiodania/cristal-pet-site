@@ -127,7 +127,7 @@ function Footer() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="font-heading font-extrabold text-dark/80 text-lg md:text-xl mt-10 md:mt-14"
+            className="font-heading font-extrabold text-dark/80 text-base md:text-lg mt-10 md:mt-14"
           >
             Sua pet shop móvel de confiança.
           </motion.p>
@@ -137,7 +137,7 @@ function Footer() {
       </div>
 
       <div className="bg-teal pt-16 pb-12">
-        <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid sm:grid-cols-3 gap-10 text-center sm:text-left">
+        <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-3 gap-10 text-center sm:text-left">
           <motion.div
             variants={fadeUp}
             initial="hidden"

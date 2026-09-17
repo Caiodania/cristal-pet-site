@@ -22,7 +22,7 @@ function Feedback() {
   // da coluna de texto.
   return (
     <section id="feedback" className="relative bg-cream py-20 md:py-28 overflow-x-clip">
-      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`grid lg:grid-cols-2 gap-14 lg:gap-20 ${hasMany ? 'lg:items-start' : 'lg:items-center'}`}
         >
@@ -38,7 +38,7 @@ function Feedback() {
               <span className="text-magenta">Feedback dos </span>
               <span className="text-dark">clientes</span>
             </h2>
-            <p className="font-body text-dark/70 text-lg lg:text-xl mt-4 max-w-xl mx-auto lg:mx-0">
+            <p className="font-body text-dark/70 text-lg mt-4 max-w-xl mx-auto lg:mx-0">
               Fotos e vídeos enviados por quem já recebeu a Cristal Pet Móvel em
               casa.
             </p>
@@ -73,7 +73,7 @@ function Feedback() {
                 <FaHeart className="text-teal text-lg" aria-hidden="true" />
                 Siga-nos nas redes sociais!
               </p>
-              <p className="font-body text-dark/70 text-base leading-relaxed mt-2">
+              <p className="font-body text-dark/70 text-[15px] leading-relaxed mt-2">
                 Curta, comente e compartilhe: cada interação ajuda mais AUmigos a
                 conhecerem o cuidado Low Stress. Por lá você acompanha novos
                 atendimentos, bastidores da unidade móvel e dicas para o seu pet.

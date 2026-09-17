@@ -84,7 +84,7 @@ function Contact() {
 
   return (
     <section id="contato" className="relative bg-cream py-20 md:py-28">
-      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-stretch">
           <motion.div
             variants={fadeUp}
@@ -263,10 +263,10 @@ function Contact() {
                 y={10}
               />
               <div className="relative h-full bg-white rounded-2xl shadow-lg p-6 text-center">
-                <Icon className="text-2xl xl:text-3xl text-magenta mx-auto mb-3" />
+                <Icon className="text-2xl text-magenta mx-auto mb-3" />
                 <h3 className="font-heading font-extrabold text-dark mb-1">{title}</h3>
                 {lines.map(({ text, href }) => (
-                  <p key={text} className="font-body text-dark/70 text-base">
+                  <p key={text} className="font-body text-dark/70 text-[15px]">
                     {href ? (
                       <a href={href} className="hover:text-magenta transition-colors">
                         {text}

@@ -48,7 +48,7 @@ function CornerBorders() {
 function About() {
   return (
     <section id="sobre" className="relative bg-cream py-20 md:py-28">
-      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 items-center gap-16">
           <motion.div
             variants={fadeUp}
@@ -174,12 +174,12 @@ function About() {
                 height={250}
                 loading="lazy"
                 decoding="async"
-                className="w-20 h-20 xl:w-24 xl:h-24 object-contain mx-auto mb-4"
+                className="w-20 h-20 object-contain mx-auto mb-4"
               />
               <h3 className="font-heading font-black text-xl text-magenta mb-3">
                 {title}
               </h3>
-              <p className="font-body text-dark/70 text-base leading-relaxed">
+              <p className="font-body text-dark/70 text-[15px] leading-relaxed">
                 {body}
               </p>
             </motion.div>
@@ -197,7 +197,7 @@ function About() {
               height={250}
               loading="lazy"
               decoding="async"
-              className="w-20 h-20 xl:w-24 xl:h-24 object-contain mx-auto mb-4"
+              className="w-20 h-20 object-contain mx-auto mb-4"
             />
             <h3 className="font-heading font-black text-xl text-magenta mb-3">
               Valores
@@ -206,7 +206,7 @@ function About() {
               {VALUES.map((value) => (
                 <li
                   key={value}
-                  className="flex items-start justify-center gap-2 font-body text-dark/70 text-base"
+                  className="flex items-start justify-center gap-2 font-body text-dark/70 text-[15px]"
                 >
                   <FaCheckCircle className="text-teal mt-0.5 shrink-0" />
                   {value}
@@ -248,7 +248,7 @@ function About() {
                     suffixClassName="text-magenta"
                   />
                 </p>
-                <p className="font-body font-semibold text-magenta text-base mt-2">
+                <p className="font-body font-semibold text-magenta text-[15px] mt-2">
                   {label}
                 </p>
               </div>

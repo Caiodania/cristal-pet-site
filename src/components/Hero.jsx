@@ -18,7 +18,7 @@ function Hero() {
         precisar recortar a imagem.
       */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto h-full px-4 sm:px-6 lg:px-8 xl:px-12 grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto h-full px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 md:gap-12">
           <div className="relative">
             {/*
               Ampliada e sangrando pela esquerda: o corte descarta as margens
@@ -46,7 +46,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid md:grid-cols-2 items-center gap-8 md:gap-12">
+      <div className="relative z-10 max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 items-center gap-8 md:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,12 +62,12 @@ function Hero() {
             <span className="text-magenta font-extrabold">na porta da sua casa.</span>
           </h1>
 
-          <p className="font-body font-normal text-dark/80 text-lg lg:text-xl mt-6 max-w-md mx-auto md:mx-0">
+          <p className="font-body font-normal text-dark/80 text-lg mt-6 max-w-md mx-auto md:mx-0">
             O cuidado premium que seu melhor amigo merece. O Banho e Tosa
             Móvel que Transforma o Cuidado do seu Pet.
           </p>
 
-          <p className="font-body font-bold text-dark text-lg lg:text-xl mt-4 max-w-md mx-auto md:mx-0">
+          <p className="font-body font-bold text-dark text-lg mt-4 max-w-md mx-auto md:mx-0">
             Atendemos Indaiatuba, Campinas, Valinhos e Vinhedo.
           </p>
 
@@ -99,7 +99,7 @@ function Hero() {
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            className="relative w-64 sm:w-80 md:w-full max-w-md xl:max-w-lg h-auto drop-shadow-2xl"
+            className="relative w-64 sm:w-80 md:w-full max-w-md h-auto drop-shadow-2xl"
           />
         </motion.div>
       </div>

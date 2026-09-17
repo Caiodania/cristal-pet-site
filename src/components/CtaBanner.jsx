@@ -37,7 +37,7 @@ function CtaBanner() {
             <span className="text-magenta">Pet</span>
           </h2>
 
-          <p className="font-body text-dark/70 text-lg lg:text-xl mt-6 max-w-xl mx-auto">
+          <p className="font-body text-dark/70 text-lg mt-6 max-w-xl mx-auto">
             Diga adeus ao estresse dos pet shops convencionais. Agende agora e
             descubra por que somos a escolha número 1 de quem ama seus
             animais.

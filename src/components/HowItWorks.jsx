@@ -44,7 +44,7 @@ function HowItWorks() {
     <section className="relative bg-teal pt-24 pb-28 md:pt-32 md:pb-36">
       <WaveDivider color="text-cream" flip />
 
-      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -86,7 +86,7 @@ function HowItWorks() {
                   height={563}
                   loading="lazy"
                   decoding="async"
-                  className="relative w-32 h-32 md:w-36 md:h-36 xl:w-44 xl:h-44 object-cover rounded-2xl shadow-lg"
+                  className="relative w-32 h-32 md:w-36 md:h-36 object-cover rounded-2xl shadow-lg"
                 />
               </div>
 
@@ -97,7 +97,7 @@ function HowItWorks() {
                 <h3 className="font-heading font-extrabold text-xl text-white mt-1 mb-2">
                   {title}
                 </h3>
-                <p className="font-body text-white/90 text-base leading-relaxed">
+                <p className="font-body text-white/90 text-[15px] leading-relaxed">
                   {description}
                 </p>
               </div>

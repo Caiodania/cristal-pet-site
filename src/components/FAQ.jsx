@@ -86,7 +86,7 @@ function FaqColumn({ items }) {
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
-              className={`w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-heading font-bold text-base md:text-lg ${isOpen ? 'text-white' : 'text-magenta'}`}
+              className={`w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-heading font-bold ${isOpen ? 'text-white' : 'text-magenta'}`}
             >
               {item.question}
               <FiChevronDown
@@ -103,7 +103,7 @@ function FaqColumn({ items }) {
                   transition={{ duration: 0.25, ease: 'easeInOut' }}
                   className="overflow-hidden"
                 >
-                  <p className="px-6 pb-5 font-body text-white/90 text-base leading-relaxed">
+                  <p className="px-6 pb-5 font-body text-white/90 text-[15px] leading-relaxed">
                     {item.answer}
                   </p>
                 </motion.div>
@@ -119,7 +119,7 @@ function FaqColumn({ items }) {
 function FAQ() {
   return (
     <section id="faq" className="relative bg-cream pt-20 pb-8 md:pt-28 md:pb-10 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={fadeUp}
           initial="hidden"

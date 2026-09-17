@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-sm shadow-sm">
-      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 h-16 md:h-20">
+      <div className="max-w-7xl 2xl:max-w-[82rem] mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 md:h-20">
         <a href="#inicio" className="shrink-0" aria-label="Cristal Pet Móvel - página inicial">
           <img
             src="/img/logo-cristal-pet.webp"
