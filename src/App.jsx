@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import BenefitsCards from './components/BenefitsCards'
 import TrustSection from './components/TrustSection'
 import Services from './components/Services'
+import Puppies from './components/Puppies'
 import CtaBanner from './components/CtaBanner'
 import About from './components/About'
 import HowItWorks from './components/HowItWorks'
@@ -23,6 +24,7 @@ function App() {
         <BenefitsCards />
         <TrustSection />
         <Services />
+        <Puppies />
         <CtaBanner />
         <About />
         <HowItWorks />

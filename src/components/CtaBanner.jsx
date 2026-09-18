@@ -6,7 +6,7 @@ import SectionAccent from './SectionAccent'
 function CtaBanner() {
   return (
     <section className="relative">
-      <WaveDivider color="text-cream" flip />
+      <WaveDivider color="text-teal" flip />
 
       <div className="relative py-24 md:py-32 overflow-hidden">
         <img

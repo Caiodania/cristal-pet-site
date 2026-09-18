@@ -26,6 +26,15 @@ p, li {
   text-wrap: pretty;
 }
 
+/*
+  O embed.js do Instagram fixa `min-width: 326px` inline no iframe. Nas três
+  colunas da seção Feedback (1024–1279px) a coluna tem ~305px, então o iframe
+  precisa poder encolher junto com o card — o conteúdo do embed é responsivo.
+*/
+.instagram-media {
+  min-width: 0 !important;
+}
+
 /* Anel pulsante do botão flutuante de WhatsApp. */
 @keyframes cp-pulse-ring {
   0% {

@@ -11,6 +11,10 @@ export const WHATSAPP_LINK_FEEDBACK = `https://wa.me/${WHATSAPP_NUMBER}?text=${e
   'Olá! Fui atendido pela Cristal Pet e quero enviar uma foto ou vídeo do meu pet.',
 )}`
 
+export const WHATSAPP_LINK_FILHOTE = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  'Olá! Tenho um filhote e quero agendar o primeiro banho dele com a Cristal Pet.',
+)}`
+
 export const INSTAGRAM_HANDLE = 'cristalpetmovel'
 
 export const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}`

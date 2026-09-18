@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaBone } from 'react-icons/fa6'
 import { fadeUp, fadeUpContainer, viewportOnce } from '../lib/motion'
+import WaveDivider from './WaveDivider'
 
 // O ícone de cada card é o de cor oposta à do fundo, como no site original:
 // card teal recebe ícone magenta e card magenta recebe ícone teal.
@@ -87,6 +88,9 @@ function Services() {
           ))}
         </motion.div>
       </div>
+
+      {/* Onda na cor da próxima seção (Filhotes, teal). */}
+      <WaveDivider color="text-teal" />
     </section>
   )
 }
